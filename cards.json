@@ -1,0 +1,138 @@
+[
+    {
+        "filename": "jongho_01.jpg",
+        "member": "jongho",
+        "album": "The Dream Chapter",
+        "version": "Photocard A",
+        "rarity": "Common",
+        "price": 25.0
+    },
+    {
+        "filename": "jongho_02.jpg",
+        "member": "jongho",
+        "album": "The Dream Chapter",
+        "version": "Photocard B",
+        "rarity": "Common",
+        "price": 25.0
+    },
+    {
+        "filename": "jongho_03.jpg",
+        "member": "jongho",
+        "album": "The Dream Chapter",
+        "version": "Photocard C",
+        "rarity": "Rare",
+        "price": 40.0
+    },
+    {
+        "filename": "jongho_04.jpg",
+        "member": "jongho",
+        "album": "The Dream Chapter",
+        "version": "Photocard D",
+        "rarity": "Rare",
+        "price": 40.0
+    },
+    {
+        "filename": "jongho_05.jpg",
+        "member": "jongho",
+        "album": "The Dream Chapter",
+        "version": "Photocard E",
+        "rarity": "Ultra Rare",
+        "price": 60.0
+    },
+    {
+        "filename": "hongjoong_01.jpg",
+        "member": "hongjoong",
+        "album": "The Dream Chapter",
+        "version": "Photocard A",
+        "rarity": "Common",
+        "price": 25.0
+    },
+    {
+        "filename": "hongjoong_02.jpg",
+        "member": "hongjoong",
+        "album": "The Dream Chapter",
+        "version": "Photocard B",
+        "rarity": "Common",
+        "price": 25.0
+    },
+    {
+        "filename": "hongjoong_03.jpg",
+        "member": "hongjoong",
+        "album": "The Dream Chapter",
+        "version": "Photocard C",
+        "rarity": "Rare",
+        "price": 40.0
+    },
+    {
+        "filename": "hongjoong_04.jpg",
+        "member": "hongjoong",
+        "album": "The Dream Chapter",
+        "version": "Photocard D",
+        "rarity": "Rare",
+        "price": 40.0
+    },
+    {
+        "filename": "hongjoong_05.jpg",
+        "member": "hongjoong",
+        "album": "The Dream Chapter",
+        "version": "Photocard E",
+        "rarity": "Ultra Rare",
+        "price": 60.0
+    },
+    {
+        "filename": "seonghwa_01.jpg",
+        "member": "seonghwa",
+        "album": "Treasure",
+        "version": "Photocard A",
+        "rarity": "Common",
+        "price": 25.0
+    },
+    {
+        "filename": "seonghwa_02.jpg",
+        "member": "seonghwa",
+        "album": "Treasure",
+        "version": "Photocard B",
+        "rarity": "Common",
+        "price": 25.0
+    },
+    {
+        "filename": "seonghwa_03.jpg",
+        "member": "seonghwa",
+        "album": "Treasure",
+        "version": "Photocard C",
+        "rarity": "Rare",
+        "price": 40.0
+    },
+    {
+        "filename": "seonghwa_04.jpg",
+        "member": "seonghwa",
+        "album": "Treasure",
+        "version": "Photocard D",
+        "rarity": "Rare",
+        "price": 40.0
+    },
+    {
+        "filename": "seonghwa_05.jpg",
+        "member": "seonghwa",
+        "album": "Treasure",
+        "version": "Photocard E",
+        "rarity": "Ultra Rare",
+        "price": 60.0
+    },
+    {
+        "filename": "jongho_test.jpg",
+        "member": "jongho",
+        "album": "Unknown",
+        "version": "Unknown",
+        "rarity": "Unknown",
+        "price": 0
+    },
+    {
+        "filename": "seonghwa_test.jpg",
+        "member": "hongjoong",
+        "album": "Unknown",
+        "version": "Unknown",
+        "rarity": "Unknown",
+        "price": 0
+    }
+]
