@@ -134,5 +134,13 @@
         "version": "Unknown",
         "rarity": "Unknown",
         "price": 0
+    },
+    {
+        "filename": "test.jpg",
+        "member": "hongjoong",
+        "album": "Unknown",
+        "version": "Unknown",
+        "rarity": "Unknown",
+        "price": 0
     }
 ]

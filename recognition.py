@@ -78,14 +78,12 @@ def identify_and_show(image_path, top_k=3):
 # 5. Função para adicionar metadados no JSON
 def add_metadata(filename, member, album="Unknown", version="Unknown", rarity="Unknown", price=0):
     metadata_file = "cards.json"
-    # Carrega dados existentes
     if os.path.exists(metadata_file):
         with open(metadata_file, "r") as f:
             data = json.load(f)
     else:
         data = []
 
-    # Verifica se já existe
     if not any(d["filename"] == filename for d in data):
         data.append({
             "filename": filename,
@@ -96,43 +94,57 @@ def add_metadata(filename, member, album="Unknown", version="Unknown", rarity="U
             "price": price
         })
 
-    # Salva de volta
     with open(metadata_file, "w") as f:
         json.dump(data, f, indent=4)
 
-# 6. Função para identificar e adicionar foto + metadados
+# 6. Função CORRIGIDA para identificar e salvar com threshold
 def identify_and_save_with_metadata(image_path, top_k=3, auto_add=True,
                                     album="Unknown", version="Unknown",
-                                    rarity="Unknown", price=0):
+                                    rarity="Unknown", price=0, distance_threshold=30):
     global index, labels, file_paths
 
     resultados = identify_and_show(image_path, top_k)
     top_label, _, dist = resultados[0]
-    print(f"Top candidato: {top_label}, distância: {dist}")
+    print(f"Top candidato: {top_label}, distância: {dist:.4f}")
 
-    if auto_add:
-        # Copia a foto pro banco
-        member_folder = os.path.join("data", top_label)
-        os.makedirs(member_folder, exist_ok=True)
-        new_file_name = os.path.basename(image_path)
-        destino = os.path.join(member_folder, new_file_name)
+    if not auto_add:
+        return resultados
+
+    new_file_name = os.path.basename(image_path)
+
+    if dist > distance_threshold:
+        # Se a distância for grande demais, classifica como "unsorted"
+        unsorted_folder = os.path.join("data", "unsorted")
+        os.makedirs(unsorted_folder, exist_ok=True)
+        destino = os.path.join(unsorted_folder, new_file_name)
         shutil.copy(image_path, destino)
-        print(f"✅ Foto adicionada ao banco de {top_label}: {destino}")
+        print(f"⚠️ Distância alta ({dist:.2f}). Foto movida para: {destino}")
+        add_metadata(new_file_name, "unsorted", album, version, rarity, price)
+        print("⚠️ Metadados salvos com member='unsorted'")
+        return resultados
 
-        # Atualiza índice FAISS
-        emb = get_embedding(destino).reshape(1, -1)
-        index.add(emb)
-        labels.append(top_label)
-        file_paths.append(destino)
-        print("✅ Índice FAISS atualizado com a nova foto.")
+    # Caso contrário, adiciona normalmente
+    member_folder = os.path.join("data", top_label)
+    os.makedirs(member_folder, exist_ok=True)
+    destino = os.path.join(member_folder, new_file_name)
+    shutil.copy(image_path, destino)
+    print(f"✅ Foto adicionada ao banco de {top_label}: {destino}")
 
-        # Adiciona metadados
-        add_metadata(new_file_name, top_label, album, version, rarity, price)
-        print("✅ Metadados salvos no cards.json")
+    # Atualiza índice FAISS
+    emb = get_embedding(destino).reshape(1, -1)
+    index.add(emb)
+    labels.append(top_label)
+    file_paths.append(destino)
+    print("✅ Índice FAISS atualizado com a nova foto.")
+
+    add_metadata(new_file_name, top_label, album, version, rarity, price)
+    print("✅ Metadados salvos no cards.json")
 
     return resultados
 
-# 7. Teste
-test_img = "test/jongho_test.jpg"
-resultados = identify_and_save_with_metadata(test_img)
+# ----------------
+# Teste após a função corrigida
+# ----------------
+test_img = "test/test.jpg"
+resultados = identify_and_save_with_metadata(test_img, distance_threshold=30)
 print("Top 3 candidatos:", resultados)
