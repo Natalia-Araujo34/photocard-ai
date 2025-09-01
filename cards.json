@@ -1,43 +1,43 @@
 [
     {
         "filename": "jongho_01.jpg",
-        "member": "jongho",
-        "album": "The Dream Chapter",
-        "version": "Photocard A",
+        "member": "Jongho",
+        "album": "ATEEZ X NACIFIC",
+        "version": "Nacific Dew Glaze",
         "rarity": "Common",
-        "price": 25.0
+        "price": 30.0
     },
     {
         "filename": "jongho_02.jpg",
-        "member": "jongho",
-        "album": "The Dream Chapter",
-        "version": "Photocard B",
+        "member": "Jongho",
+        "album": "POB",
+        "version": "ATEEZ X NACIFIC",
         "rarity": "Common",
         "price": 25.0
     },
     {
         "filename": "jongho_03.jpg",
-        "member": "jongho",
-        "album": "The Dream Chapter",
-        "version": "Photocard C",
+        "member": "Jongho",
+        "album": "ATEEZ X NACIFIC",
+        "version": "ATEEZ'S PLAYGROUND ver",
         "rarity": "Rare",
-        "price": 40.0
+        "price": 100.0
     },
     {
         "filename": "jongho_04.jpg",
-        "member": "jongho",
-        "album": "The Dream Chapter",
-        "version": "Photocard D",
+        "member": "Jongho",
+        "album": "ATEEZ X NACIFIC",
+        "version": "Flowering Day",
         "rarity": "Rare",
-        "price": 40.0
+        "price": 60.0
     },
     {
         "filename": "jongho_05.jpg",
-        "member": "jongho",
-        "album": "The Dream Chapter",
-        "version": "Photocard E",
-        "rarity": "Ultra Rare",
-        "price": 60.0
+        "member": "Jongho",
+        "album": "ATEEZ X NACIFIC",
+        "version": "Summer",
+        "rarity": "Common",
+        "price": 30.0
     },
     {
         "filename": "hongjoong_01.jpg",
@@ -121,11 +121,11 @@
     },
     {
         "filename": "jongho_test.jpg",
-        "member": "jongho",
-        "album": "Unknown",
-        "version": "Unknown",
-        "rarity": "Unknown",
-        "price": 0
+        "member": "Jongho",
+        "album": "Golden Hour PT. 2",
+        "version": "Regular 3",
+        "rarity": "Common",
+        "price": 25.0
     },
     {
         "filename": "seonghwa_test.jpg",
